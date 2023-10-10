@@ -2,7 +2,7 @@
 Time tracker for Data Rating
 
 
--------------------------------------------------------------------------------------  DATA RATING TOOL  ---------------------------------------------------------------------------------------------------------------
+--------------------------------------  DATA RATING TOOL  --------------------------------------
 
 This is a timer app that allows you to track your progress daily, you can save each task to a total number, turn it into time value, and then save it in a log file. 
 
