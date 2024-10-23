@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 from decimal import Decimal
 import datetime
