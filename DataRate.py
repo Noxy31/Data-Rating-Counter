@@ -54,13 +54,12 @@ class Ui_DataRating(object):
         self.timer_label = QtWidgets.QLabel(self.centralWidget)
         self.timer_label.setObjectName("timer_label")
 
-        # Utilisez un QHBoxLayout pour centrer le label du timer
         timer_layout = QtWidgets.QHBoxLayout()
         timer_layout.addWidget(self.timer_label, alignment=QtCore.Qt.AlignCenter)
         self.gridLayout.addLayout(timer_layout, 5, 0, 1, 2)
         self.label_18 = QtWidgets.QLabel(self.centralWidget)
         self.label_18.setObjectName("label_18")
-        self.gridLayout.addWidget(self.label_18, 6, 1, 1, 1, QtCore.Qt.AlignRight)  # Alignement à droite
+        self.gridLayout.addWidget(self.label_18, 6, 1, 1, 1, QtCore.Qt.AlignRight)
 
         self.retranslateUi(DataRating)
         QtCore.QMetaObject.connectSlotsByName(DataRating)
@@ -77,7 +76,7 @@ class Ui_DataRating(object):
             self.total += Decimal(value)
             self.result.setText(str(self.total))
             print("Total:", self.total)
-            self.timer_label.setText("00:00:00")  # Redémarrer le timer à zéro
+            self.timer_label.setText("00:00:00")
 
     def add_free_value(self):
         value = self.FreeValue.toPlainText()
@@ -114,7 +113,7 @@ class Ui_DataRating(object):
         with open(file_path, "a") as file:
             file.write(log_entry)
 
-        subprocess.Popen(["pythonw", "nom_de_votre_script.py"], creationflags=subprocess.DETACHED_PROCESS,
+        subprocess.Popen(["pythonw", ""], creationflags=subprocess.DETACHED_PROCESS,
                          close_fds=True)
 
     def convert_to_hours(self):
@@ -130,10 +129,10 @@ class Ui_DataRating(object):
 
         self.Btotal.setText(_translate("DataRating", "Total"))
         self.label_34.setText(_translate("DataRating", "="))
-        self.SaveButton.setText(_translate("DataRating", "Save"))  # Save button
-        self.pushButton.setText(_translate("DataRating", "Clean"))  # Clean button
-        self.pushButton_2.setText(_translate("DataRating", "Add Value"))  # Add value button
-        self.timer_label.setText(_translate("DataRating", "00:00:00"))  # Initial text of the timer
+        self.SaveButton.setText(_translate("DataRating", "Save"))
+        self.pushButton.setText(_translate("DataRating", "Clean")) 
+        self.pushButton_2.setText(_translate("DataRating", "Add Value")) 
+        self.timer_label.setText(_translate("DataRating", "00:00:00"))
         self.label_18.setText(_translate("DataRating", "Nox - 2023"))
         self.pushButton_2.clicked.connect(self.add_free_value)
         self.pushButton.clicked.connect(self.reset_total)
